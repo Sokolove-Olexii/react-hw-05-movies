@@ -1,0 +1,83 @@
+.MovieDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &_imgPos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &_position {
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  &_img {
+    max-height: 1152px;
+    max-width: 768px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+  }
+  &_scorePos {
+    display: flex;
+    gap: 6px;
+  }
+  &_score {
+    color: rgba(255, 145, 0, 0.948);
+  }
+  &_overview {
+    max-width: 768px;
+  }
+  &_genres {
+    margin-bottom: 25px;
+  }
+}
+
+.MovieDetailsAddInf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  &_pos {
+    display: flex;
+    gap: 45px;
+    margin-bottom: 15px;
+  }
+  &_link {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 2px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #fff;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+
+    &:active {
+      color: #ff6b08;
+
+      &::after {
+        background-color: #e65100;
+      }
+    }
+  }
+}

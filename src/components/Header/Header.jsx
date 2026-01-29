@@ -1,11 +1,12 @@
 import { Container } from "../Container/Container";
 import styles from "./Header.module.scss";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
+import { Suspense } from "react";
 
 function Header() {
   return (
-    <Container>
-      <section className={styles.Header}>
+    <>
+      <header className={styles.Header}>
         <ul className={styles.HeaderList}>
           <li className={styles.HeaderList_li}>
             <Link to="/react-hw-05-movies" className={styles.HeaderList_link}>
@@ -13,13 +14,19 @@ function Header() {
             </Link>
           </li>
           <li>
-            <Link to="/movies" className={styles.HeaderList_link}>
+            <Link to="movies" className={styles.HeaderList_link}>
               Movies
             </Link>
           </li>
         </ul>
-      </section>
-    </Container>
+      </header>
+
+      <main>
+        <Suspense fallback={<div>Loading page...</div>}>
+          <Outlet />
+        </Suspense>
+      </main>
+    </>
   );
 }
 
