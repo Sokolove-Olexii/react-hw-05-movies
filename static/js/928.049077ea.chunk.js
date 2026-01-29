@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_hw_05_movies=self.webpackChunkreact_hw_05_movies||[]).push([[928],{928(e,s,c){c.r(s),c.d(s,{default:()=>a});var h=c(579);const a=()=>(0,h.jsx)("div",{children:(0,h.jsx)("h1",{children:"404 - Page Not Found"})})}}]);
+//# sourceMappingURL=928.049077ea.chunk.js.map
