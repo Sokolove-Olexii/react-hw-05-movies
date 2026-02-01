@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useSearchParams, Link, useLocation } from "react-router-dom";
 import { searchMovies, getTopRated } from "../../api/tmdb";
+import { ToHomeScreen } from "../../components/ToHomeSceen/ToHomeScreen";
 import { Container } from "../../components/Container/Container";
 import styles from "./Movies.module.scss";
 
@@ -95,6 +96,7 @@ const Movies = () => {
             </ul>
           </div>
         )}
+        <ToHomeScreen />
       </div>
     </Container>
   );

@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef, Suspense } from "react";
 import { useParams, Link, Outlet, useLocation } from "react-router-dom";
 import { getMovieDetails } from "../../api/tmdb";
+import { ToHomeScreen } from "../../components/ToHomeSceen/ToHomeScreen";
 import { Container } from "../../components/Container/Container";
 import styles from "./MovieDetails.module.scss";
 
@@ -65,6 +66,7 @@ const MovieDetails = () => {
             </li>
           </ul>
         </div>
+        <ToHomeScreen />
       </section>
 
       <Suspense fallback={<div>Loading subpage...</div>}>
